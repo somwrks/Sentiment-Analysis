@@ -16,6 +16,7 @@
     "axios": "^1.6.8",
     "csv-parser": "^3.0.0",
     "csvtojson": "^2.0.10",
+    "fs": "^0.0.1-security",
     "next": "14.2.2",
     "next-auth": "^4.24.7",
     "react": "^18",

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NextPage } from 'next';
 import { sentimentAnalysisFunction } from '../ml/sentimentAnalysis';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   const [inputText, setInputText] = useState<string>('');
@@ -37,8 +38,13 @@ const Home: NextPage = () => {
         />
         <br />
         <button type="submit">Analyze Sentiment</button>
+        <p>Used Sigmoid, binaryCrossentropy, adam, relu on accuracy</p>
+        <p>data from <Link href={"https://www.kaggle.com/datasets/abhi8923shriv/sentiment-analysis-dataset"}>kaggle</Link></p>
       </form>
-      {sentimentResult && <p>Sentiment: {sentimentResult}</p>}
+      <h1 className='mt-4'>
+        {sentimentResult &&  sentimentResult
+        }
+        </h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </main>
   );
