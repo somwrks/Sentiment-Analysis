@@ -8,11 +8,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "train": "ts-node ml/trainModel.cjs"
+    "train": "ts-node ml/trainModel.ts"
   },
   "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.11",
     "@tensorflow/tfjs": "^4.18.0",
-    "@tensorflow/tfjs-node": "^3.1.0",
     "@types/next-auth": "^3.15.0",
     "axios": "^1.6.8",
     "csv-parser": "^3.0.0",
