@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sentiment Analysis App
 
-## Getting Started
+This is a Next.js application that performs sentiment analysis on text data using a TensorFlow.js model. The application is built with TypeScript and utilizes the TensorFlow.js library for training and evaluating the machine learning model.
 
-First, run the development server:
+## Overview
+
+The project consists of the following components:
+
+1. `pages/index.tsx`: The main page that allows users to input text and receive the sentiment analysis result.
+2. `ml/sentimentAnalysis.ts`: This module contains the core logic for training the sentiment analysis model and performing predictions.
+
+## Dependencies
+
+The project requires the following dependencies:
+
+- Next.js
+- TensorFlow.js
+- React
+- TypeScript
+
+## Setup
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-repo/sentiment-analysis-app.git
 ```
+2. Installing dependencies:
+   ```bash
+   cd sentiment-analysis-app
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The application will be accessible at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+  
+  1. Open the application in your web browser.
+  2. Enter some text in the input field.
+  3. Click the "Analyze Sentiment" button.
+  4. The sentiment analysis result (positive, negative, or neutral) will be displayed.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Code Structure
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- pages/index.tsx: This file contains the main page component, which includes the input field and displays the sentiment analysis result.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- ml/sentimentAnalysis.ts: This module is responsible for training the sentiment analysis model and performing predictions. It utilizes the TensorFlow.js library for machine learning tasks.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- public/dataset/: This directory contains the CSV files used for training and testing the sentiment analysis model.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+  The Next.js application can be deployed to various hosting platforms, such as Vercel, Netlify, or a custom server.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  This project is licensed under the MIT License.
